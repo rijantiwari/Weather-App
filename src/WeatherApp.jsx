@@ -4,7 +4,7 @@ import "./WeatherApp.css";
 import { classifyWeather } from "./utility/weatherUtils";
 import DisplayWeather from "./DisplayWeather";
 
-const WeatherApp = ({ latitude, longitude, locationName }) => {
+const WeatherApp = ({ latitude, longitude, locationName, unit }) => {
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -27,6 +27,7 @@ const WeatherApp = ({ latitude, longitude, locationName }) => {
           ],
           daily: ["weather_code", "temperature_2m_max", "temperature_2m_min"],
           timezone: "auto",
+          temperature_unit: unit === "F" ? "fahrenheit" : "celsius", // Use unit prop to fetch data in the specified unit
         };
         const response = await axios.get(url, { params });
         setWeatherData(response.data);
@@ -39,7 +40,7 @@ const WeatherApp = ({ latitude, longitude, locationName }) => {
 
     // Call the fetchWeatherData function
     fetchWeatherData();
-  }, [latitude, longitude]);
+  }, [latitude, longitude, unit]);
 
   if (loading) return <div className="weather-container">Loading...</div>;
   if (error) return <div className="weather-container">Error: {error}</div>;

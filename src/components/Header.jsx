@@ -36,7 +36,7 @@ const Header = ({ location, weather }) => {
     <div className="header">
       <p>
         Right Now in <span>{displayedLocation}</span>
-        <span className={showCursor ? "cursor" : ""}></span>, it's {weather}
+        <span className={showCursor ? "cursor" : ""}></span>, {weather}
       </p>
     </div>
   );

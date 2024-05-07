@@ -2,8 +2,8 @@
 .weather-container {
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #faf8f8;
   width: 90%;
+  height: 500px;
   margin-left: 5%;
 }
 
@@ -11,7 +11,7 @@
   display: inline-block;
   width: 0.2em;
   height: 1em;
-  background-color: black;
+  background-color: rgb(13, 12, 12);
   animation: blink 1s infinite;
 }
 

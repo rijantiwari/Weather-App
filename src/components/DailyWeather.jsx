@@ -24,7 +24,7 @@ const DailyWeather = ({ daily }) => {
             <WeatherImage weatherCode={day.weather_code} />
           </div>
           <p className="weather-textTemp">
-            {day.minTemp}°C /{day.maxTemp}°C
+            {day.minTemp} /{day.maxTemp}
           </p>
           <p className="weather-text">{day.dayOfWeek}</p>
         </div>

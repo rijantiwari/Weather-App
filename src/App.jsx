@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import WeatherApp from "./WeatherApp";
 import LocationSearch from "./LocationSearch";
 import "./style.css";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [coordinates, setCoordinates] = useState({
@@ -9,6 +10,7 @@ const App = () => {
     longitude: null,
   });
   const [locationName, setLocationName] = useState("");
+  const [unit, setUnit] = useState("C"); // Default unit is Celsius
 
   useEffect(() => {
     // Fetch user's current location
@@ -61,6 +63,11 @@ const App = () => {
     }
   };
 
+  // Function to handle unit change
+  const handleUnitChange = (selectedUnit) => {
+    setUnit(selectedUnit);
+  };
+
   return (
     <div className="weather-container">
       <LocationSearch
@@ -74,10 +81,12 @@ const App = () => {
           <WeatherApp
             latitude={coordinates.latitude}
             longitude={coordinates.longitude}
-            locationName={locationName} // Pass locationName as prop
+            locationName={locationName}
+            unit={unit} // Pass unit as prop
           />
         )}
       </main>
+      <Footer onUnitChange={handleUnitChange} />
     </div>
   );
 };

@@ -1,34 +1,44 @@
-// weatherUtils.js
-
 export const classifyWeather = (weatherCode) => {
   // Define weather conditions based on weather codes
-  if (weatherCode === 0) {
-    return "Clear sky";
-  } else if (weatherCode >= 1 && weatherCode <= 3) {
-    return "Mainly clear, partly cloudy, and overcast";
-  } else if (weatherCode === 45 || weatherCode === 48) {
-    return "Fog and depositing rime fog";
-  } else if (weatherCode === 51 || weatherCode === 53 || weatherCode === 55) {
-    return "Drizzle: Light, moderate, and dense intensity";
-  } else if (weatherCode === 56 || weatherCode === 57) {
-    return "Freezing Drizzle: Light and dense intensity";
-  } else if (weatherCode === 61 || weatherCode === 63 || weatherCode === 65) {
-    return "Rain: Slight, moderate, and heavy intensity";
-  } else if (weatherCode === 66 || weatherCode === 67) {
-    return "Freezing Rain: Light and heavy intensity";
-  } else if (weatherCode === 71 || weatherCode === 73 || weatherCode === 75) {
-    return "Snow fall: Slight, moderate, and heavy intensity";
-  } else if (weatherCode === 77) {
-    return "Snow grains";
-  } else if (weatherCode >= 80 && weatherCode <= 82) {
-    return "Rain showers: Slight, moderate, and violent";
-  } else if (weatherCode === 85 || weatherCode === 86) {
-    return "Snow showers slight and heavy";
-  } else if (weatherCode === 95) {
-    return "Thunderstorm: Slight or moderate";
-  } else if (weatherCode === 96 || weatherCode === 99) {
-    return "Thunderstorm with slight and heavy hail";
-  } else {
-    return "Unknown";
+  switch (weatherCode) {
+    case 0:
+      return "Clear sky";
+    case 1:
+    case 2:
+    case 3:
+      return "Partly cloudy";
+    case 4:
+      return "Mostly cloudy";
+    case 45:
+    case 48:
+      return "Fog and rime fog";
+    case 51:
+    case 53:
+    case 55:
+      return "Light rain";
+    case 61:
+    case 63:
+    case 65:
+      return "Rain";
+    case 71:
+    case 73:
+    case 75:
+      return "Snowfall";
+    case 77:
+      return "Snow grains";
+    case 80:
+    case 81:
+    case 82:
+      return "Rain showers";
+    case 85:
+    case 86:
+      return "Snow showers";
+    case 95:
+      return "Thunderstorm";
+    case 96:
+    case 99:
+      return "Thunderstorm with hail";
+    default:
+      return "Unknown";
   }
 };

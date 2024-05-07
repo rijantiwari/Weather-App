@@ -36,10 +36,9 @@ const DisplayWeather = ({
       <Header location={location} weather={weather} />
       <WeatherImage weatherCode={weatherCode} />
       <div className="temperature-display">
-        <p className="mainTemperature">{temperature} °C</p>
+        <p className="mainTemperature">{temperature} </p>
         <p className="hourlyTemperature">
-          {temperatureOneHourAgo}°C (1h Ago) / {temperatureOneHourAfter}°C (1h
-          After)
+          {temperatureOneHourAgo} / {temperatureOneHourAfter}
         </p>
       </div>
       <div className="detailWeather">
