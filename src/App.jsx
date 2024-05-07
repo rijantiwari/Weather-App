@@ -13,7 +13,7 @@ const App = () => {
   const [unit, setUnit] = useState("C"); // Default unit is Celsius
 
   useEffect(() => {
-    // Fetch user's current location
+    // Fetching user's current location
     const fetchUserLocation = () => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -23,7 +23,7 @@ const App = () => {
               longitude: position.coords.longitude,
             });
 
-            // Call reverse geocoding function
+            // Calling  reverse geocoding function
             fetchLocationName(
               position.coords.latitude,
               position.coords.longitude
@@ -82,7 +82,7 @@ const App = () => {
             latitude={coordinates.latitude}
             longitude={coordinates.longitude}
             locationName={locationName}
-            unit={unit} // Pass unit as prop
+            unit={unit} // Passing  unit as prop
           />
         )}
       </main>

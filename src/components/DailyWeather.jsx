@@ -1,6 +1,6 @@
 import React from "react";
 import WeatherImage from "./WeatherImage";
-import cloudImage from "../images/cloud.svg"; // Import the cloud image
+import cloudImage from "../images/cloud.svg";
 
 const DailyWeather = ({ daily }) => {
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];

@@ -1,6 +1,8 @@
 /* WeatherApp.css */
 .weather-container {
+  background-color: #f8f4f4;
   border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
   border-radius: 5px;
   width: 90%;
   height: 500px;

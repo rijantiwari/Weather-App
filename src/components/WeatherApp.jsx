@@ -38,7 +38,7 @@ const WeatherApp = ({ latitude, longitude, locationName, unit }) => {
       }
     };
 
-    // Call the fetchWeatherData function
+    // Calling the fetchWeatherData function
     fetchWeatherData();
   }, [latitude, longitude, unit]);
 

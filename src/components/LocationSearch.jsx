@@ -16,7 +16,7 @@ const LocationSearch = ({ onLocationChange }) => {
         const city = data.features[0].properties.city;
         const country = data.features[0].properties.country;
         const locationName = `${city}, ${country}`;
-        onLocationChange(lat, lon, locationName); // Pass locationName to the handler
+        onLocationChange(lat, lon, locationName);
       } else {
         console.error("Location not found");
       }
