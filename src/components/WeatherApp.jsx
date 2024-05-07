@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./WeatherApp.css";
-import { classifyWeather } from "./utility/weatherUtils";
+import "../WeatherApp.css";
+import { classifyWeather } from "../utility/weatherUtils";
 import DisplayWeather from "./DisplayWeather";
 
 const WeatherApp = ({ latitude, longitude, locationName, unit }) => {
@@ -50,7 +50,7 @@ const WeatherApp = ({ latitude, longitude, locationName, unit }) => {
       ? classifyWeather(weatherData.current.weather_code)
       : "Unknown";
 
-  console.log("DailyTempMax", weatherData.daily.temperature_2m_max);
+  console.log("DailyTempMax", weatherData.daily.weather_code);
   return (
     <DisplayWeather
       hourlyTemp={weatherData.hourly.temperature_2m}

@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./components/Header";
-import WeatherImage from "./components/WeatherImage";
-import RainPercentage from "./images/RainPercentage.svg";
-import WindSpeed from "./images/windSpeed.svg";
-import Humidity from "./images/humidity.svg";
-import DailyWeather from "./components/DailyWeather";
+import Header from "./Header";
+import WeatherImage from "./WeatherImage";
+import RainPercentage from "../images/RainPercentage.svg";
+import WindSpeed from "../images/windSpeed.svg";
+import Humidity from "../images/humidity.svg";
+import DailyWeather from "./DailyWeather";
 const DisplayWeather = ({
   location,
   weather,

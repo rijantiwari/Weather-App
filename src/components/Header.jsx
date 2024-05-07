@@ -6,7 +6,6 @@ const Header = ({ location, weather }) => {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    // Simulate typewriter effect
     let currentIndex = 0;
     const intervalId = setInterval(() => {
       setDisplayedLocation(location.substring(0, currentIndex));
@@ -14,19 +13,17 @@ const Header = ({ location, weather }) => {
       if (currentIndex > location.length) {
         clearInterval(intervalId);
       }
-    }, 100); // Adjust the speed of typing here (milliseconds)
+    }, 100);
 
     return () => {
       clearInterval(intervalId);
     };
   }, [location]);
 
-  // Blinking cursor animation
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor((prev) => !prev);
-    }, 500); // Adjust blinking speed here (milliseconds)
-
+    }, 500);
     return () => {
       clearInterval(cursorInterval);
     };

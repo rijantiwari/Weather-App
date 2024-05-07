@@ -9,13 +9,19 @@ main {
 
 .search-container {
   margin-top: 20px;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 input[type="text"] {
   padding: 8px;
   margin-right: 10px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 4px;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Adjust width as needed */
 }
 
 button {

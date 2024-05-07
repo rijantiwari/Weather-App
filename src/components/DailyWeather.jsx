@@ -1,5 +1,7 @@
 import React from "react";
 import WeatherImage from "./WeatherImage";
+import cloudImage from "../images/cloud.svg"; // Import the cloud image
+
 const DailyWeather = ({ daily }) => {
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const today = new Date().getDay();
@@ -22,6 +24,11 @@ const DailyWeather = ({ daily }) => {
         <div key={index} className="weather-forecast-item">
           <div className="weather-image-container">
             <WeatherImage weatherCode={day.weather_code} />
+            {day.weather_code >= 1 && day.weather_code <= 3 && (
+              <div className="dailyCloud-cover">
+                <img src={cloudImage} alt="Cloud" />
+              </div>
+            )}
           </div>
           <p className="weather-textTemp">
             {day.minTemp} /{day.maxTemp}

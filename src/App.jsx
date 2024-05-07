@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import WeatherApp from "./WeatherApp";
-import LocationSearch from "./LocationSearch";
+import WeatherApp from "./components/WeatherApp";
+import LocationSearch from "./components/LocationSearch";
 import "./style.css";
 import Footer from "./components/Footer";
 
