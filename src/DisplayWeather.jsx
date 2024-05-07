@@ -4,6 +4,7 @@ import WeatherImage from "./components/WeatherImage";
 import RainPercentage from "./images/RainPercentage.svg";
 import WindSpeed from "./images/windSpeed.svg";
 import Humidity from "./images/humidity.svg";
+import DailyWeather from "./components/DailyWeather";
 const DisplayWeather = ({
   location,
   weather,
@@ -13,6 +14,7 @@ const DisplayWeather = ({
   hourlyTemp,
   humidity,
   rainfallProbability,
+  daily,
 }) => {
   const hourlyData = hourlyTemp;
   const currentTime = new Date();
@@ -54,6 +56,7 @@ const DisplayWeather = ({
           <p>{humidity}%</p>
         </div>
       </div>
+      <DailyWeather daily={daily} />
     </div>
   );
 };

@@ -1,19 +1,14 @@
 /* WeatherApp.css */
-/* .weather-container {
+.weather-container {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
-  margin-top: 20px;
-  background-color: #f9f9f9;
+  margin-top: 10px;
+  background-color: #faf8f8;
+  width: 90%;
+  margin-left: 5%;
 }
 
-.weather-container h2 {
-  margin-top: 0;
-}
-
-.weather-container p {
-  margin: 10px 0;
-} */
 .cursor {
   display: inline-block;
   width: 0.2em;
@@ -100,4 +95,52 @@
 
 .weatherItem img {
   margin-right: 10px; /* Adjust margin between image and text */
+}
+
+.weather-forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 5%;
+}
+
+.weather-forecast-item {
+  flex: 1;
+
+  text-align: center;
+}
+
+.weather-forecast-item .weather-text {
+  margin-right: 35%;
+}
+.weather-forecast-item .weather-textTemp {
+  margin-top: 22%;
+  margin-right: 35%;
+}
+
+.weather-forecast-item .weather-image-container {
+  position: relative; /* Ensure proper positioning */
+}
+
+.weather-forecast-item .weather-image-container img {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Adjust the size as needed */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .weather-forecast-item {
+    flex: 1 1 45%; /* Adjust item width for smaller screens */
+    margin: 5px; /* Reduce margin for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .weather-forecast-item {
+    flex: 1 1 100%; /* Adjust item width for even smaller screens */
+  }
+
+  .weather-forecast-item .weather-text {
+    margin-top: 5px; /* Adjust margin top for smaller screens */
+  }
 }

@@ -5,10 +5,9 @@ import lightRain from "../images/lightRain.svg";
 import heavyRain from "../images/HeavyRain.svg";
 import thunderRain from "../images/thunderRain.svg";
 import { classifyWeather } from "../utility/weatherUtils";
-
-const WeatherImage = ({ weatherCode }) => {
+const WeatherImage = ({ weatherCode, className }) => {
   return (
-    <div>
+    <div className={className}>
       {weatherCode >= 1 &&
         weatherCode <= 3 && ( // Render sun and cloud cover for partly cloudy
           <div>

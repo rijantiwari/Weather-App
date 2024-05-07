@@ -49,7 +49,7 @@ const WeatherApp = ({ latitude, longitude, locationName }) => {
       ? classifyWeather(weatherData.current.weather_code)
       : "Unknown";
 
-  console.log("windspeed", weatherData.current.windspeed_10m);
+  console.log("DailyTempMax", weatherData.daily.temperature_2m_max);
   return (
     <DisplayWeather
       hourlyTemp={weatherData.hourly.temperature_2m}
@@ -60,6 +60,7 @@ const WeatherApp = ({ latitude, longitude, locationName }) => {
       windSpeed={weatherData.current.windspeed_10m}
       humidity={weatherData.current.relative_humidity_2m}
       rainfallProbability={weatherData.current.precipitation_probability}
+      daily={weatherData.daily}
     />
   );
 };
