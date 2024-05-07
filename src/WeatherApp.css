@@ -41,6 +41,10 @@
   animation: rotate 20s linear infinite; /* Adjust values as needed */
   width: 100px; /* Adjust width and height for your image */
   height: 100px;
+  top: 22%;
+  left: 25%;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes rotate {
@@ -50,4 +54,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+.cloud-cover {
+  position: absolute; /* Overlap other elements */
+  top: 22%;
+  left: 22%; /* Align to the left */
+  width: 30%; /* Cover the entire width */
+  height: 30%; /* Cover the entire height (adjust if needed) */
+  background-image: url("./images/cloud.svg");
+  background-size: 150px 150px; /* Replace with your cloud image path */
+  background-repeat: no-repeat; /* Prevent tiling */
+}
+
+.mostly-cloudy {
+  position: absolute; /* Overlap other elements */
+  top: 22%;
+  left: 22%; /* Align to the left */
+  width: 12%; /* Cover the entire width */
+  height: %; /* Cover the entire height (adjust if needed) */
 }

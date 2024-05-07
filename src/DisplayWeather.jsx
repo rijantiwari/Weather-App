@@ -1,11 +1,18 @@
 import React from "react";
 import Header from "./components/Header";
-import sun from "./images/Sun.svg";
-const DisplayWeather = ({ location, weather, temperature, windSpeed }) => {
+import WeatherImage from "./components/WeatherImage";
+
+const DisplayWeather = ({
+  location,
+  weather,
+  temperature,
+  windSpeed,
+  weatherCode,
+}) => {
   return (
     <div className="weather-container">
       <Header location={location} weather={weather} />
-      <img src={sun} alt="Example" className="rotating-sun" />
+      <WeatherImage weatherCode={weatherCode} />
       <p>Location: {location}</p>
       <p>Weather: {weather}</p>
       <p>Temperature: {temperature}°C</p>
