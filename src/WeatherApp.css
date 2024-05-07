@@ -71,5 +71,16 @@
   top: 22%;
   left: 22%; /* Align to the left */
   width: 12%; /* Cover the entire width */
-  height: %; /* Cover the entire height (adjust if needed) */
+  height: 15%; /* Cover the entire height (adjust if needed) */
+}
+
+.temperature-display .mainTemperature {
+  font-size: 50px;
+  margin-top: 4%;
+  margin-bottom: 0;
+}
+.temperature-display .hourlyTemperature {
+  font-size: 20px;
+  color: gray;
+  margin-top: 0;
 }

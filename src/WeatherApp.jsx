@@ -74,8 +74,10 @@ const WeatherApp = ({ latitude, longitude, locationName }) => {
       ? classifyWeather(weatherData.current.weather_code)
       : "Unknown";
 
+  console.log("hourly data", weatherData.hourly.temperature_2m);
   return (
     <DisplayWeather
+      hourlyTemp={weatherData.hourly.temperature_2m}
       weatherCode={weatherData.current.weather_code}
       location={locationName}
       weather={weatherDescription}
