@@ -17,7 +17,13 @@ const WeatherApp = ({ latitude, longitude, locationName }) => {
           latitude: latitude,
           longitude: longitude,
           hourly: ["temperature_2m", "weather_code", "windspeed_10m"],
-          current: ["temperature_2m", "weather_code", "windspeed_10m"],
+          current: [
+            "temperature_2m",
+            "weather_code",
+            "windspeed_10m",
+            "relative_humidity_2m",
+            "precipitation_probability",
+          ],
           timezone: "auto",
         };
         const response = await axios.get(url, { params });
@@ -74,7 +80,7 @@ const WeatherApp = ({ latitude, longitude, locationName }) => {
       ? classifyWeather(weatherData.current.weather_code)
       : "Unknown";
 
-  console.log("hourly data", weatherData.hourly.temperature_2m);
+  console.log("windspeed", weatherData.current.windspeed_10m);
   return (
     <DisplayWeather
       hourlyTemp={weatherData.hourly.temperature_2m}
@@ -83,6 +89,8 @@ const WeatherApp = ({ latitude, longitude, locationName }) => {
       weather={weatherDescription}
       temperature={weatherData.current.temperature_2m}
       windSpeed={weatherData.current.windspeed_10m}
+      humidity={weatherData.current.relative_humidity_2m}
+      rainfallProbability={weatherData.current.precipitation_probability}
     />
   );
 };

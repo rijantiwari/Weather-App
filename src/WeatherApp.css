@@ -73,7 +73,9 @@
   width: 12%; /* Cover the entire width */
   height: 15%; /* Cover the entire height (adjust if needed) */
 }
-
+.temperature-display {
+  position: relative;
+}
 .temperature-display .mainTemperature {
   font-size: 50px;
   margin-top: 4%;
@@ -81,6 +83,21 @@
 }
 .temperature-display .hourlyTemperature {
   font-size: 20px;
-  color: gray;
+  color: rgb(180, 178, 178);
   margin-top: 0;
+}
+.detailWeather {
+  position: absolute;
+  top: 22%;
+  right: 20%;
+}
+
+.weatherItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* Adjust margin between items */
+}
+
+.weatherItem img {
+  margin-right: 10px; /* Adjust margin between image and text */
 }

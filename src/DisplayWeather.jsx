@@ -1,7 +1,9 @@
 import React from "react";
 import Header from "./components/Header";
 import WeatherImage from "./components/WeatherImage";
-
+import RainPercentage from "./images/RainPercentage.svg";
+import WindSpeed from "./images/windSpeed.svg";
+import Humidity from "./images/humidity.svg";
 const DisplayWeather = ({
   location,
   weather,
@@ -9,6 +11,8 @@ const DisplayWeather = ({
   windSpeed,
   weatherCode,
   hourlyTemp,
+  humidity,
+  rainfallProbability,
 }) => {
   const hourlyData = hourlyTemp;
   const currentTime = new Date();
@@ -36,8 +40,20 @@ const DisplayWeather = ({
           After)
         </p>
       </div>
-
-      <p>Wind Speed: {windSpeed} m/s</p>
+      <div className="detailWeather">
+        <div className="weatherItem">
+          <img src={WindSpeed} alt="Wind Speed" />
+          <p> {windSpeed} km/h</p>
+        </div>
+        <div className="weatherItem">
+          <img src={RainPercentage} alt="Rain Percentage" />
+          <p>{rainfallProbability}%</p>
+        </div>
+        <div className="weatherItem">
+          <img src={Humidity} alt="Humidity" />
+          <p>{humidity}%</p>
+        </div>
+      </div>
     </div>
   );
 };
