@@ -13,7 +13,9 @@ const LocationSearch = ({ onLocationChange }) => {
       const data = await response.json();
       if (data.features.length > 0) {
         const { lat, lon } = data.features[0].properties;
-        const locationName = data.features[0].properties.formatted;
+        const city = data.features[0].properties.city;
+        const country = data.features[0].properties.country;
+        const locationName = `${city}, ${country}`;
         onLocationChange(lat, lon, locationName); // Pass locationName to the handler
       } else {
         console.error("Location not found");

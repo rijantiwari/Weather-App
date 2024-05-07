@@ -32,7 +32,7 @@ const DisplayWeather = ({
   const temperatureOneHourAfter = hourlyData[oneHourAfterIndex];
 
   return (
-    <div className="weather-container">
+    <div>
       <Header location={location} weather={weather} />
       <WeatherImage weatherCode={weatherCode} />
       <div className="temperature-display">

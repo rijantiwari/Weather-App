@@ -2,8 +2,6 @@
 .weather-container {
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 20px;
-  margin-top: 10px;
   background-color: #faf8f8;
   width: 90%;
   margin-left: 5%;
@@ -28,6 +26,7 @@
     opacity: 0;
   }
 }
+
 .header p span {
   font-weight: bold;
   font-size: 1.2em; /* Adjust the font size as needed */
@@ -112,10 +111,13 @@
 
 .weather-forecast-item .weather-text {
   margin-right: 35%;
+  font-weight: bold;
+  color: gray;
 }
 .weather-forecast-item .weather-textTemp {
   margin-top: 22%;
   margin-right: 35%;
+  color: gray;
 }
 
 .weather-forecast-item .weather-image-container {

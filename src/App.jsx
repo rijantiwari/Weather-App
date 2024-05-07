@@ -48,7 +48,10 @@ const App = () => {
       );
       const data = await response.json();
       if (data && data.features && data.features.length > 0) {
-        const locationName = data.features[0].properties.formatted;
+        const locationDetails = data.features[0].properties;
+        const city = locationDetails.city;
+        const country = locationDetails.country;
+        const locationName = `${city}, ${country}`;
         setLocationName(locationName);
       } else {
         console.error("Location name not found");
@@ -59,7 +62,7 @@ const App = () => {
   };
 
   return (
-    <div className="app-container">
+    <div className="weather-container">
       <LocationSearch
         onLocationChange={(lat, lon, name) => {
           setCoordinates({ latitude: lat, longitude: lon });
