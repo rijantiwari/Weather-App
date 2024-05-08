@@ -2,7 +2,7 @@ import React from "react";
 import sun from "../images/sun.png";
 import mostlyCloudy from "../images/mostlyCloudy.svg";
 import lightRain from "../images/light-rain.png";
-import heavyRain from "../images/HeavyRain.svg";
+import heavyRain from "../images/HeavyRain.png";
 import thunderStorm from "../images/thunderStorm.svg";
 import snowFall from "../images/snowFall.png";
 import rainShowers from "../images/rainShowers.png";

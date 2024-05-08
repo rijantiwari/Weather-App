@@ -1,5 +1,6 @@
 {
   "name": "weather-app",
+  "homepage": "http://rijantiwari.com.np/weatherApp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

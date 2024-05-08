@@ -3,7 +3,8 @@ import React, { useState } from "react";
 const LocationSearch = ({ onLocationChange }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSearch = async () => {
+  const handleSearch = async (e) => {
+    e.preventDefault(); // Preventing default form submission behavior
     try {
       const response = await fetch(
         `https://api.geoapify.com/v1/geocode/search?text=${encodeURIComponent(
@@ -17,6 +18,7 @@ const LocationSearch = ({ onLocationChange }) => {
         const country = data.features[0].properties.country;
         const locationName = `${city}, ${country}`;
         onLocationChange(lat, lon, locationName);
+        setSearchTerm(""); // Clearing the input area
       } else {
         console.error("Location not found");
       }
@@ -27,13 +29,15 @@ const LocationSearch = ({ onLocationChange }) => {
 
   return (
     <div className="search-container">
-      <input
-        type="text"
-        placeholder="Enter location..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+      <form onSubmit={handleSearch}>
+        <input
+          type="text"
+          placeholder="Enter location..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button type="submit">Search</button>
+      </form>
     </div>
   );
 };
